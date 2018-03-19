@@ -46,7 +46,7 @@ class Book(models.Model):
         """
         return reverse('book-detail', args=[str(self.id)])
 
-class BookInstances(models.Model):
+class BookInstance(models.Model):
     """
     Model representing a specific copy of a book (i.e. that can be borrowed from the library)
     """
