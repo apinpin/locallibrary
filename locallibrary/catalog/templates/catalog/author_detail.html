@@ -7,6 +7,11 @@
 
     <div style="margin-left:20px;margin-top:20px">
         <h4>Books</h4>
-        
+
+        {% for b in author.book_set.all %}
+        <hr>
+        <a href="{{ b.get_absolute_url }}">{{ b.title }}</a> ({{ b.bookinstance_set.count }}) 
+        <p>{{ b.summary }}</p>
+        {% endfor %}
     </div>
 {% endblock %}
